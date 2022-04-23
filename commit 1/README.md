@@ -1,6 +1,7 @@
 ## Commit 1
 
-The following programs aim to solve really simple standard form linear optimization problems.
+The following programs aim to solve really simple standard form linear optimization problems.  
+
 $$
 \begin{aligned}
 &\min \quad c'x\\

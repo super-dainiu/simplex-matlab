@@ -15,7 +15,7 @@ function [x, fval, exitflag] = linprog_revised(c, A, b, mute)
     A_aux = A; A_aux(:, b < 0) = - A_aux(:, b < 0); A_aux = [A_aux, eye(m)];
     c_aux = [zeros(n, 1); ones(m, 1)];
 
-    % Construct tableau
+    % Construct matrices
     B = [false(n, 1); true(m, 1)]; B_ind = find(B);
     B_inv = inv(A_aux(:, B_ind)); p = c_aux(B_ind)' * B_inv;
     c_bar = c_aux' - p * A_aux;
@@ -93,6 +93,7 @@ function [x, fval, exitflag] = linprog_revised(c, A, b, mute)
         % Stepsize
         u = B_inv * A(:, pivot_c);
         if sum(u < tol) == m
+            exitflag = -3;
             break
         end
         theta = x(B_ind) ./ u; theta(u < tol) = inf;

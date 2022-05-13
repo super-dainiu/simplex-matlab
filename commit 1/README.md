@@ -1,6 +1,7 @@
 ## Commit 1
 
-The following programs aim to solve really simple standard form linear optimization problems.
+The following programs aim to solve really simple standard form linear optimization problems.  
+
 $$
 \begin{aligned}
 &\min \quad c'x\\
@@ -24,15 +25,15 @@ $$
 
 - [linprog_tableau.m](linprog_tableau.m): Tableau simplex method. 
 
-​		Usage: [x, fval, exitflag] = linprog_tableau(c, A, b, mute)
+  Usage: [x, fval, exitflag] = linprog_tableau(c, A, b, mute)
 
-​		x: optimal solution
+  x: optimal solution
 
-​		fval: optimal value
+  fval: optimal value
 
-​		exitflag: 0 for *Optimal solution found*, -2 for *Linprog stopped because no point satisfies the constraints*.
+  exitflag: 0 for *Optimal solution found*, -2 for *Linprog stopped because no point satisfies the constraints*.
 
-​		mute(=false): whether to mute the warnings
+  mute(=false): whether to mute the warnings
 
 
 

@@ -26,15 +26,15 @@ $$
 
 - [linprog_dual_revised.m](linprog_dual_revised.m): Revised dual simplex method.  (You need to input a dual feasible solution, and it will converge to primal feasibility.)
 
-​		Usage: [x, fval, exitflag] = linprog_dual_revised(c, A, b, B_ind, mute)
+  Usage: [x, fval, exitflag] = linprog_dual_revised(c, A, b, B_ind, mute)
 
-​		x: optimal solution
+  x: optimal solution
 
-​		fval: optimal value
+  fval: optimal value
 
-​		exitflag: 0 for *Optimal solution found*, -2 for *Linprog stopped because no point satisfies the constraints*.
+  exitflag: 0 for *Optimal solution found*, -2 for *Linprog stopped because no point satisfies the constraints*.
 
-​		mute(=false): whether to mute the warnings
+  mute(=false): whether to mute the warnings
 
 
 
